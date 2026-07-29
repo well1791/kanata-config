@@ -7,8 +7,8 @@
   ;; linux-dev /dev/input/event4
 
   danger-enable-cmd yes
-  rapid-event-delay 5             ;; Changed from 0 to 5 to help with laptop debounce
-  chords-v2-min-idle-experimental 30 ;; Higher idle protects fast typing
+  rapid-event-delay 5     ;; Changed from 0 to 5 to help with laptop debounce
+  chords-v2-min-idle 30   ;; Higher idle protects fast typing
 )
 
 (defsrc
