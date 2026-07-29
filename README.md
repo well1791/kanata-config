@@ -76,3 +76,8 @@ kanata --cfg ~/.config/kanata/config.kbd --check
 
 - [kanata](https://github.com/jtroo/kanata) — the remapper itself and its documentation.
 - [well1791/dotfiles](https://github.com/well1791/dotfiles) — full machine config this is wired into.
+
+## License
+
+MIT — see [LICENSE](LICENSE). The [kanata](https://github.com/jtroo/kanata) remapper has
+its own separate license.
