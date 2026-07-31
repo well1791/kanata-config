@@ -31,6 +31,7 @@
   os_nums       (one-shot-press $one_shot_timeout (layer-while-held L_NUMS))
   os_ff         (one-shot-press $one_shot_timeout (layer-while-held L_FF))
   os_ch         (one-shot-press $one_shot_timeout (layer-while-held L_CHARS))
+  os_mods       (one-shot-press $one_shot_timeout (layer-while-held L_MODS))
 
   ;; WHILE HELD (ALPHA)
   al_nav_a          (tap-hold $tap_timeout $hold_timeout a (layer-while-held L_NAV_R))
@@ -64,3 +65,7 @@
 ;; --------------------------------------------------------------
 ;; Go-to shortcuts layer
 (include _go.kbd)
+
+;; --------------------------------------------------------------
+;; Modifiers layer
+(include _mods.kbd)

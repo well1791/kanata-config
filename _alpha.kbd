@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Alpha / Plain / Chars module
-;; Included by config.kbd via (include alpha.kbd).
+;; Included by config.kbd via (include _alpha.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - chord aliases : pl_* + al_*
@@ -29,12 +29,6 @@
   os_ctl        (one-shot-press $one_shot_timeout lctl)
   os_alt        (one-shot-press $one_shot_timeout lalt)
   os_sup        (one-shot-press $one_shot_timeout lmet)
-  os_ctl_sft    (one-shot-press $one_shot_timeout C-lsft)
-  os_alt_sft    (one-shot-press $one_shot_timeout A-lsft)
-  os_ctl_alt    (one-shot-press $one_shot_timeout C-lalt)
-  os_sup_sft    (one-shot-press $one_shot_timeout M-lsft)
-  os_sup_ctl    (one-shot-press $one_shot_timeout M-lctl)
-  os_sup_alt    (one-shot-press $one_shot_timeout M-lalt)
   os_meh        (one-shot-press $one_shot_timeout C-A-lsft)
 
   ;; PLAIN
@@ -118,10 +112,6 @@
   ;;                  | | |*|*|     --     |*|*| | |
   (ch_trl ch_hml ch_hil) @os_cw            (ch_hir ch_hmr ch_trr) @os_cw
 
-  ;;                  | | | |*|     --     |*| | | |
-  ;;                  | |*|*| |     --     | |*|*| |
-  ;;(ch_hrl ch_hml ch_til) ???               (ch_tir ch_hmr ch_hrr) ???
-
   ;;----------------------------------------------------------------------
   ;;                   | | | | |    --     | | | | |
   ;;                   | |*| | |    --     | | |*| |
@@ -159,7 +149,7 @@
   ;;(ch_bil ch_bml ch_hrl) ???             (ch_bir ch_bmr ch_hrr) ???
 )
 
-;; Chords: "g + h" switchs to "L_PLAIN" (same layer with no modifiers - same combo to switch back)
+;; Chords: "g + h" switches to "L_PLAIN" (same layer with no modifiers - same combo to switch back)
 (deflayermap (L_ALPHA)
   caps @esc_sft
 

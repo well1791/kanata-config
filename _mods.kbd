@@ -1,0 +1,71 @@
+;; ==============================================================
+;; Modifiers module
+;; Included by config.kbd via (include _mods.kbd).
+;; ==============================================================
+;; Contains:
+;;   - chord group   : defchords CH_MOD
+;;   - layer         : L_MODS
+;;
+;; Resolved via kanata global namespace:
+;;   needs var : chord_timeout (defvar in config.kbd)
+;;   provides  : layer name L_MODS (triggered by os_mods in config.kbd)
+
+(defalias
+  ;; ONE-SHOT MODIFIERS
+  ;;os_sft        (one-shot-press $one_shot_timeout lsft)
+  ;;os_ctl        (one-shot-press $one_shot_timeout lctl)
+  ;;os_alt        (one-shot-press $one_shot_timeout lalt)
+  ;;os_sup        (one-shot-press $one_shot_timeout lmet)
+  ;;os_meh        (one-shot-press $one_shot_timeout C-A-lsft)
+  os_ctl_sft    (one-shot-press $one_shot_timeout C-lsft)
+  os_alt_sft    (one-shot-press $one_shot_timeout A-lsft)
+  os_ctl_alt    (one-shot-press $one_shot_timeout C-lalt)
+  os_sup_sft    (one-shot-press $one_shot_timeout M-lsft)
+  os_sup_ctl    (one-shot-press $one_shot_timeout M-lctl)
+  os_sup_alt    (one-shot-press $one_shot_timeout M-lalt)
+
+  mo_hi         (chord CH_MOD ch_hi)
+  mo_hm         (chord CH_MOD ch_hm)
+  mo_hr         (chord CH_MOD ch_hr)
+  mo_ti         (chord CH_MOD ch_ti)
+  mo_tm         (chord CH_MOD ch_tm)
+  mo_tr         (chord CH_MOD ch_tr)
+)
+
+(defchords CH_MOD $chord_timeout
+  ;; MODS CHORDS
+  (ch_ti) @os_sup   (ch_tm) tab   (ch_tr) @os_alt
+  (ch_hi) @os_sft   (ch_hm) esc   (ch_hr) @os_ctl
+
+  ;;                  | | | | |     --     | | | | |
+  ;;                  | |*| |*|     --     |*| |*| |
+  (ch_hi  ch_hr) @os_ctl_sft
+
+  ;;                  | |*| |*|     --     |*| |*| |
+  ;;                  | | | | |     --     | | | | |
+  (ch_ti  ch_tr) @os_sup_alt
+
+  ;;                  | |*| | |     --     | | |*| |
+  ;;                  | | | |*|     --     |*| | | |
+  (ch_hi  ch_tr) @os_alt_sft
+
+  ;;                  | | | |*|     --     |*| | | |
+  ;;                  | |*| | |     --     | | |*| |
+  (ch_ti  ch_hr) @os_sup_ctl
+
+  ;;                  | | | | |     --     | | | | |
+  ;;                  | |*|*|*|     --     |*|*|*| |
+  (ch_hi  ch_hm  ch_hr) @os_meh
+)
+
+(deflayermap (L_MODS)
+  ;; LEFT
+          q XX    w @mo_tr    e @mo_tm     r @mo_ti
+          a XX    s @mo_hr    d @mo_hm     f @mo_hi    g XX
+          z XX    x XX        c XX         v XX
+
+  ;; RIGHT
+          u @mo_ti    i @mo_tm    o @mo_tr    p XX
+  h XX    j @mo_hi    k @mo_hm    l @mo_hr    ; XX
+          m XX        , XX        . XX        / XX
+)
