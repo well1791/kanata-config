@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Go-to shortcuts layer module
-;; Included by config.kbd via (include go.kbd).
+;; Included by config.kbd via (include _go.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - layer : L_GO (browser/app tab, history, window shortcuts)

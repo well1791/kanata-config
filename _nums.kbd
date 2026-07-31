@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Numbers module
-;; Included by config.kbd via (include nums.kbd).
+;; Included by config.kbd via (include _nums.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - chord aliases : ns_si ns_hi ns_hm ns_hr ns_hp ns_ti ns_tm ns_tr ns_tp ns_bi ns_bm

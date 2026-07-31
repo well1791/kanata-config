@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Navigation module
-;; Included by config.kbd via (include nav.kbd).
+;; Included by config.kbd via (include _nav.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - chord aliases : na_up na_dn na_lt na_rt na_tab na_bspc

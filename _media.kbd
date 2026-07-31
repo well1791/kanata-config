@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Media layer module
-;; Included by config.kbd via (include media.kbd).
+;; Included by config.kbd via (include _media.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - layer : L_MEDIA (volume, brightness, playback)

@@ -1,6 +1,6 @@
 ;; ==============================================================
 ;; Function-keys module
-;; Included by config.kbd via (include ff.kbd).
+;; Included by config.kbd via (include _ff.kbd).
 ;; ==============================================================
 ;; Contains:
 ;;   - chord aliases : ff_hi ff_hm ff_hr ff_ti ff_tm ff_tr
