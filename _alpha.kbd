@@ -22,7 +22,12 @@
   esc_sft       (tap-hold $tap_timeout $hold_timeout esc lsft)
 
   ;; ONE SHOT
-  os_cw         (caps-word 1500)
+  ;;os_cw         (caps-word 1500)
+  os_cwc        (caps-word-custom
+    1500
+    (a b c d e f g h i j k l m n o p q r s t u v w x y z)
+    (0 1 2 3 4 5 6 7 8 9 bspc del up down left rght -)
+  )
 
   ;; MODIFIERS
   os_sft        (one-shot-press $one_shot_timeout lsft)
@@ -110,7 +115,7 @@
 
   ;;                  | |*| | |     --     | | |*| |
   ;;                  | | |*|*|     --     |*|*| | |
-  (ch_trl ch_hml ch_hil) @os_cw            (ch_hir ch_hmr ch_trr) @os_cw
+  (ch_trl ch_hml ch_hil) @os_cwc           (ch_hir ch_hmr ch_trr) @os_cwc
 
   ;;----------------------------------------------------------------------
   ;;                   | | | | |    --     | | | | |
