@@ -9,24 +9,27 @@
 ;;   provides      : layer name L_GO (triggered by os_go in config.kbd)
 
 (defalias
-  alt_9          (macro A-9)
-  alt_1          (macro A-1)
-  alt_grv        (macro A-grv)
-  ctl_tab        (macro C-tab)
-  ctl_pgup       (macro C-pgup)
-  ctl_pgdn       (macro C-pgdn)
-  ctl_w          (macro C-w)
-  ctl_sft_t      (macro C-S-t)
+  go_ti          (macro C-S-t)
+  go_tm          (macro C-pgup)
+  go_tr          (macro A-grv)
+  go_tp          (macro A-9)
+  go_si          (macro M-A-i)
+  go_hi          (macro C-w)
+  go_hm          (macro C-pgdn)
+  go_hr          (macro C-tab)
+  go_hp          (macro A-1)
+  go_bi          XX
+  go_bm          XX
 )
 
 (deflayermap (L_GO) ;; Go-to shortcuts
   ;; LEFT
-          q @alt_9    w @alt_grv    e @ctl_pgup    r @ctl_sft_t
-          a @alt_1    s @ctl_tab    d @ctl_pgdn    f @ctl_w        g XX
-          z XX        x XX          c XX           v XX
+          q @go_tp    w @go_tr    e @go_tm    r @go_ti
+          a @go_hp    s @go_hr    d @go_hm    f @go_hi    g @go_si
+          z XX        x XX        c @go_bm    v @go_bi
 
   ;; RIGHT
-          u @ctl_sft_t    i @ctl_pgup    o @alt_grv    p @alt_9
-  h XX    j @ctl_w        k @ctl_pgdn    l @ctl_tab    ; @alt_1
-          m XX            , XX           . XX          / XX
+              u @go_ti    i @go_tm    o @go_tr    p @go_tp
+  h @go_si    j @go_hi    k @go_hm    l @go_hr    ; @go_hp
+              m @go_bi    , @go_bm    . XX          / XX
 )
