@@ -26,10 +26,10 @@
   ;; LEFT
           q @go_tp    w @go_tr    e @go_tm    r @go_ti
           a @go_hp    s @go_hr    d @go_hm    f @go_hi    g @go_si
-          z XX        x XX        c @go_bm    v @go_bi
+                                  c @go_bm    v @go_bi
 
   ;; RIGHT
               u @go_ti    i @go_tm    o @go_tr    p @go_tp
   h @go_si    j @go_hi    k @go_hm    l @go_hr    ; @go_hp
-              m @go_bi    , @go_bm    . XX          / XX
+              m @go_bi    , @go_bm
 )

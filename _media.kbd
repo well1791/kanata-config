@@ -9,17 +9,27 @@
 ;;   provides      : layer name L_MEDIA (triggered by os_media in config.kbd)
 
 (defalias
-  restart_kanata (cmd sh -c "systemctl --user restart kanata.service")
+  me_ti       mute
+  me_tm       volu
+  me_tr       prev
+  me_tp       brup
+  me_si       (cmd sh -c "systemctl --user restart kanata.service")
+  me_hi       pp
+  me_hm       voldwn
+  me_hr       next
+  me_hp       brdwn
+  me_bi       XX
+  me_bm       XX
 )
 
 (deflayermap (L_MEDIA) ;;
   ;; LEFT
-          q brup              w prev   e volu      r mute
-          a brdwn             s next   d voldwn    f pp      g XX
-          z @restart_kanata   x XX     c XX        v XX
+          q @me_tp    w @me_tr    e @me_tm    r @me_ti
+          a @me_hp    s @me_hr    d @me_hm    f @me_hi    g @me_si
+                                  c @me_bm    v @me_bi
 
   ;; RIGHT
-          u mute    i volu     o prev    p brup
-  h XX    j pp      k voldwn   l next    ; brdwn
-          m XX      , XX       . XX      / XX
+              u @me_ti    i @me_tm    o @me_tr    p @me_tp
+  h @me_si    j @me_hi    k @me_hm    l @me_hr    ; @me_hp
+              m @me_bi    , @me_bm
 )

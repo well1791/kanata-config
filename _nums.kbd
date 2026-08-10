@@ -187,10 +187,10 @@
   ;; LEFT
               q @ns_tp    w @ns_tr    e @ns_tm    r @ns_ti
               a @ns_hp    s @ns_hr    d @ns_hm    f @ns_hi    g @ns_si
-              z XX        x XX        c @ns_bm    v @ns_bi
+                                      c @ns_bm    v @ns_bi
 
   ;; RIGHT
               u @ns_ti    i @ns_tm    o @ns_tr    p @ns_tp
   h @ns_si    j @ns_hi    k @ns_hm    l @ns_hr    ; @ns_hp
-              m @ns_bi    , @ns_bm    . XX        / XX
+              m @ns_bi    , @ns_bm
 )

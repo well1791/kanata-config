@@ -15,9 +15,11 @@
   ff_hi       (chord CH_FF ch_hi)
   ff_hm       (chord CH_FF ch_hm)
   ff_hr       (chord CH_FF ch_hr)
+  ff_hp       f11
   ff_ti       (chord CH_FF ch_ti)
   ff_tm       (chord CH_FF ch_tm)
   ff_tr       (chord CH_FF ch_tr)
+  ff_tp       f12
 )
 
 (defchords CH_FF $chord_timeout
@@ -44,12 +46,12 @@
 
 (deflayermap (L_FF)
   ;; LEFT
-          q f11    w @ff_tr    e @ff_tm     r @ff_ti
-          a f23    s @ff_hr    d @ff_hm     f @ff_hi    g XX
-          z XX     x XX        c XX         v XX
+          q @ff_tp    w @ff_tr    e @ff_tm     r @ff_ti
+          a @ff_hp    s @ff_hr    d @ff_hm     f @ff_hi    g XX
+                                  c XX         v XX
 
   ;; RIGHT
-          u @ff_ti    i @ff_tm    o @ff_tr    p f11
-  h XX    j @ff_hi    k @ff_hm    l @ff_hr    ; f12
-          m XX        , XX        . XX        / XX
+          u @ff_ti    i @ff_tm    o @ff_tr    p @ff_tp
+  h XX    j @ff_hi    k @ff_hm    l @ff_hr    ; @ff_hp
+          m XX        , XX
 )

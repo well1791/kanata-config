@@ -74,12 +74,12 @@
   ;; LEFT
           q @sw_nav_l    w lalt    e tab      r @na_pgup
           a XX           s lctl    d esc      f @na_pgdn    g XX
-          z XX           x XX      c @cpy     v @pst
+                                   c @cpy     v @pst
 
   ;; RIGHT
              u @na_tab    i @na_up    o @na_bspc    p @sw_al
   h @undo    j @na_lt     k @na_dn    l @na_rt      ; @na_entr
-             m pgup       , pgdn      . XX          / XX
+             m pgup       , pgdn
 )
 
 ;; Layer: The reverse of RIGHT
@@ -87,11 +87,11 @@
   ;; LEFT
           q @sw_al       w @na_bspc    e @na_up    r @na_tab
           a @na_entr     s @na_lt      d @na_dn    f @na_rt    g @undo
-          z XX           x XX          c pgdn      v pgup
+                                       c pgdn      v pgup
 
   ;; RIGHT
           u @na_pgup    i tab      o lalt    p @sw_nav_r
   h XX    j @na_pgdn    k esc      l lctl    ; XX
-          m @pst        , @cpy     . XX      / XX
+          m @pst        , @cpy
 )
 
