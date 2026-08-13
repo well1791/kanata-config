@@ -12,12 +12,12 @@
   go_ti          (macro C-S-t)
   go_tm          (macro C-pgup)
   go_tr          (macro A-grv)
-  go_tp          (macro A-9)
+  go_tp          (macro A-1)
   go_si          (macro M-A-i)
   go_hi          (macro C-w)
   go_hm          (macro C-pgdn)
   go_hr          (macro C-tab)
-  go_hp          (macro A-1)
+  go_hp          (macro A-9)
   go_bi          XX
   go_bm          XX
 )
