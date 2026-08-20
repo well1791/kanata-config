@@ -26,9 +26,9 @@
 )
 
 (defchords CH_NS $chord_timeout
-                  (ch_ns_ti) 6    (ch_ns_tm) 8      (ch_ns_tr) 0    (ch_ns_tp) S-/
-  (ch_ns_si) `    (ch_ns_hi) 1    (ch_ns_hm) 3      (ch_ns_hr) 5    (ch_ns_hp) '
-                  (ch_ns_bi) ,    (ch_ns_bm) S-`
+                  (ch_ns_ti) 6      (ch_ns_tm) 8      (ch_ns_tr) 0    (ch_ns_tp) ,
+  (ch_ns_si) `    (ch_ns_hi) 1      (ch_ns_hm) 3      (ch_ns_hr) 5    (ch_ns_hp) '
+                  (ch_ns_bi) S-/    (ch_ns_bm) S-`
 
   ;;--------------------------------------------------------
   ;; NUMBERS
