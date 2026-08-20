@@ -14,8 +14,8 @@
 
 (defalias
   ;; SWITCH TO
-  sw_nav_r      (layer-switch L_NAV_R)
-  sw_nav_l      (layer-switch L_NAV_L)
+  sw_nav_r    (layer-switch L_NAV_R)
+  sw_nav_l    (layer-switch L_NAV_L)
 
   ;; TAP
   na_pgup     (tap-hold $tap_timeout $hold_timeout pgup lmet)
@@ -23,17 +23,32 @@
   na_entr     (tap-hold $tap_timeout $hold_timeout enter lsft)
 
   ;; CHORDS
-  na_up       (chord CH_NA ch_up)
-  na_dn       (chord CH_NA ch_dn)
-  na_lt       (chord CH_NA ch_lt)
-  na_rt       (chord CH_NA ch_rt)
-  na_tab      (chord CH_NA ch_tab)
-  na_bspc     (chord CH_NA ch_bspc)
+  na_nav_lt  (chord CH_NA ch_lt)
+  na_nav_rt  (chord CH_NA ch_rt)
 
-  ;; MACROS
-  cpy  (macro C-c)
-  pst  (macro C-v)
-  undo (macro C-z)
+  ;; NAVIGATION (up right left down enter bspc tab etc)
+  na_nav_ti  (chord CH_NA ch_tab)
+  na_nav_tm  (chord CH_NA ch_up)
+  na_nav_tr  (chord CH_NA ch_bspc)
+  na_nav_tp  @sw_al
+  na_nav_si  XX
+  na_nav_hm  (chord CH_NA ch_dn)
+  na_nav_hp  @na_entr
+  na_nav_bi  pgup
+  na_nav_bm  pgdn
+
+  ;; MOVEMENT + MODIFIERS
+  na_mov_ti  @na_pgup
+  na_mov_tm  tab
+  na_mov_tr  lalt
+  na_mov_tp  @sw_al
+  na_mov_si  (macro C-z)
+  na_mov_hi  @na_pgdn
+  na_mov_hm  esc
+  na_mov_hr  lctl
+  na_mov_hp  @sw_al
+  na_mov_bi  (macro C-v)
+  na_mov_bm  (macro C-c)
 )
 
 (defchords CH_NA $chord_timeout
@@ -72,26 +87,26 @@
 ;; Layer: Navigation layer with modifiers and chords
 (deflayermap (L_NAV_R)
   ;; LEFT
-          q @sw_nav_l    w lalt    e tab      r @na_pgup
-          a XX           s lctl    d esc      f @na_pgdn    g XX
-                                   c @cpy     v @pst
+                  q @sw_nav_l     w @na_mov_tr    e @na_mov_tm    r @na_mov_ti
+                  a @na_mov_hp    s @na_mov_hr    d @na_mov_hm    f @na_mov_hi    g @na_mov_si
+                                                  c @na_mov_bm    v @na_mov_bi
 
   ;; RIGHT
-             u @na_tab    i @na_up    o @na_bspc    p @sw_al
-  h @undo    j @na_lt     k @na_dn    l @na_rt      ; @na_entr
-             m pgup       , pgdn
+                  u @na_nav_ti    i @na_nav_tm    o @na_nav_tr    p @na_nav_tp
+  h @na_nav_si    j @na_nav_lt    k @na_nav_hm    l @na_nav_rt    ; @na_nav_hp
+                  m @na_nav_bi    , @na_nav_bm
 )
 
 ;; Layer: The reverse of RIGHT
 (deflayermap (L_NAV_L)
   ;; LEFT
-          q @sw_al       w @na_bspc    e @na_up    r @na_tab
-          a @na_entr     s @na_lt      d @na_dn    f @na_rt    g @undo
-                                       c pgdn      v pgup
+                  q @na_nav_tp    w @na_nav_tr    e @na_nav_tm    r @na_nav_ti
+                  a @na_nav_hp    s @na_nav_lt    d @na_nav_hm    f @na_nav_rt    g @na_nav_si
+                                                  c @na_nav_bm    v @na_nav_bi
 
-  ;; RIGHT
-          u @na_pgup    i tab      o lalt    p @sw_nav_r
-  h XX    j @na_pgdn    k esc      l lctl    ; XX
-          m @pst        , @cpy
+  ;; RIGHTqmk compile -kb beekeeb/3w6hs -km well1791-11k
+                  u @na_mov_ti    i @na_mov_tm    o @na_mov_tr    p @sw_nav_r
+  h @na_mov_si    j @na_mov_hi    k @na_mov_hm    l @na_mov_hr    ; @na_mov_hp
+                  m @na_mov_bi    , @na_mov_bm
 )
 
