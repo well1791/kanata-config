@@ -12,23 +12,23 @@
 ;;   provides  : layer name L_NUMS (triggered by os_nums in config.kbd)
 
 (defalias
-  ns_si       (chord CH_NS ch_ns_si)
-  ns_hi       (chord CH_NS ch_ns_hi)
-  ns_hm       (chord CH_NS ch_ns_hm)
-  ns_hr       (chord CH_NS ch_ns_hr)
-  ns_hp       (chord CH_NS ch_ns_hp)
-  ns_ti       (chord CH_NS ch_ns_ti)
-  ns_tm       (chord CH_NS ch_ns_tm)
-  ns_tr       (chord CH_NS ch_ns_tr)
-  ns_tp       (chord CH_NS ch_ns_tp)
-  ns_bi       (chord CH_NS ch_ns_bi)
-  ns_bm       (chord CH_NS ch_ns_bm)
+  ns_si    (chord CH_NS ch_ns_si)
+  ns_hi    (chord CH_NS ch_ns_hi)
+  ns_hm    (chord CH_NS ch_ns_hm)
+  ns_hr    (chord CH_NS ch_ns_hr)
+  ns_hp    (chord CH_NS ch_ns_hp)
+  ns_ti    (chord CH_NS ch_ns_ti)
+  ns_tm    (chord CH_NS ch_ns_tm)
+  ns_tr    (chord CH_NS ch_ns_tr)
+  ns_tp    (chord CH_NS ch_ns_tp)
+  ns_bi    (chord CH_NS ch_ns_bi)
+  ns_bm    (chord CH_NS ch_ns_bm)
 )
 
 (defchords CH_NS $chord_timeout
-                    (ch_ns_ti) 6      (ch_ns_tm) 8      (ch_ns_tr) 0    (ch_ns_tp) `
-  (ch_ns_si) S-`    (ch_ns_hi) 1      (ch_ns_hm) 3      (ch_ns_hr) 5    (ch_ns_hp) '
-                    (ch_ns_bi) S-/    (ch_ns_bm) ,
+                  (ch_ns_ti) 6    (ch_ns_tm) 8      (ch_ns_tr) 0    (ch_ns_tp) S-/
+  (ch_ns_si) ,    (ch_ns_hi) 1    (ch_ns_hm) 3      (ch_ns_hr) 5    (ch_ns_hp) '
+                  (ch_ns_bi) `    (ch_ns_bm) S-`
 
   ;;--------------------------------------------------------
   ;; NUMBERS
