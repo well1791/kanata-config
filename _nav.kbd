@@ -31,7 +31,7 @@
   na_nav_tm  (chord CH_NA ch_up)
   na_nav_tr  (chord CH_NA ch_bspc)
   na_nav_tp  @sw_al
-  na_nav_si  XX
+  na_nav_si  (macro C-z)
   na_nav_hm  (chord CH_NA ch_dn)
   na_nav_hp  @na_entr
   na_nav_bi  pgup
@@ -42,7 +42,7 @@
   na_mov_tm  tab
   na_mov_tr  lalt
   na_mov_tp  @sw_al
-  na_mov_si  (macro C-z)
+  na_mov_si  XX
   na_mov_hi  @na_pgdn
   na_mov_hm  esc
   na_mov_hr  lctl
