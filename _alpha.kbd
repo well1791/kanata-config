@@ -111,11 +111,19 @@
 
   ;;                  | | |*|*|     --     |*|*| | |
   ;;                  | |*| | |     --     | | |*| |
-  (ch_hrl ch_tml ch_til) @os_ff            (ch_tir ch_tmr ch_hrr) @os_ff
+  (ch_hrl ch_tml ch_til) enter             (ch_tir ch_tmr ch_hrr) enter
 
   ;;                  | |*| | |     --     | | |*| |
   ;;                  | | |*|*|     --     |*|*| | |
-  (ch_trl ch_hml ch_hil) @os_cwc           (ch_hir ch_hmr ch_trr) @os_cwc
+  (ch_trl ch_hml ch_hil) bspc              (ch_hir ch_hmr ch_trr) bspc
+
+  ;;                  | | | | |     --     | | | | |
+  ;;                  |*|*|*| |     --     | |*|*|*|
+  (ch_hpl ch_hrl ch_hml) @os_cwc           (ch_hmr ch_hrr ch_hpr) @os_cwc
+
+  ;;                  |*|*|*| |     --     | |*|*|*|
+  ;;                  | | | | |     --     | | | | |
+  (ch_tpl ch_trl ch_tml) @os_ff            (ch_tmr ch_trr ch_tpr) @os_ff
 
   ;;----------------------------------------------------------------------
   ;;                   | | | | |    --     | | | | |
