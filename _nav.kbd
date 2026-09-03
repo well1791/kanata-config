@@ -34,8 +34,8 @@
   na_nav_si  (macro C-z)
   na_nav_hm  (chord CH_NA ch_dn)
   na_nav_hp  @na_entr
-  na_nav_bi  pgup
-  na_nav_bm  pgdn
+  na_nav_bi  del
+  na_nav_bm  XX
 
   ;; MOVEMENT + MODIFIERS
   na_mov_ti  @na_pgup
@@ -73,7 +73,7 @@
 
   ;;                  | |*|*| |     --     | |*|*| |
   ;;                  | | | | |     --     | | | | |
-  (ch_up  ch_bspc) del
+  (ch_up  ch_bspc) pgup
 
   ;;                  | | |*|*|     --     |*|*| | |
   ;;                  | | | | |     --     | | | | |
@@ -81,7 +81,7 @@
 
   ;;                  | |*| | |     --     | | |*| |
   ;;                  | | |*| |     --     | |*| | |
-  ;;(ch_dn  ch_bspc) ???
+  (ch_dn  ch_bspc) pgdn
 )
 
 ;; Layer: Navigation layer with modifiers and chords
