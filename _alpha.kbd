@@ -181,16 +181,8 @@
 ;; Chords: "g + h" to switch to "L_ALPHA"
 (deflayermap (L_PLAIN)
   caps @esc_sft
-
-  ;; LEFT
-               q q     w w     e e     r r
-               a a     s s     d d     f f    g @pl_sil
-               z XX    x XX    c XX    v XX
-
-  ;; RIGHT
-               u u     i i     o o     p p
-  h @pl_sir    j j     k k     l l     ; ;
-               m XX    , XX    . XX    / XX
+  g @pl_sil
+  h @pl_sir
 )
 
 (deflayermap (L_CHARS) ;; Characters via compose key (ralt)
