@@ -62,6 +62,22 @@ systemctl --user start kanata.service              # if you use the service
     refreshPeriod = "168h"
 ```
 
+## Uninstall
+
+**Manual:**
+```sh
+systemctl --user disable --now kanata.service       # stop it, and stop it starting at login
+rm -rf ~/.config/kanata
+```
+
+If you installed the service unit from the author's [dotfiles](https://github.com/well1791/dotfiles),
+remove that unit file too (typically `~/.config/systemd/user/kanata.service`), then run
+`systemctl --user daemon-reload`. To remove kanata itself as well, uninstall the binary with
+your package manager (see upstream docs).
+
+**Via chezmoi** — delete the `[".config/kanata"]` block from `.chezmoiexternal.toml`, then run
+`chezmoi apply`. Delete `~/.config/kanata` yourself if the directory is left behind.
+
 ## Customizing
 
 Layers are built from chord groups (`defchords CH_AL`, `CH_NA`, `CH_NS`, `CH_FF`) and
