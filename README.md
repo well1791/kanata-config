@@ -35,6 +35,8 @@ Regeneration:
    keymap-JSON tab of [keymap-drawer](https://keymap-drawer.streamlit.app/), then download
    the rendered SVG as `keymap.svg`.
 
+**Source:** [spreadsheet](https://docs.google.com/spreadsheets/d/1zWwkYRQJQ8ao0kMYnWUnc-Qe-N1wYalShalTAtkvUZg/edit?usp=sharing)
+
 ## Layer system
 
 | Layer | Purpose | How it's reached |
