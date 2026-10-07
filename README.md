@@ -7,6 +7,34 @@ through **home-row chords** — combinations of adjacent keys pressed together �
 rarely leave the home row. Built around a standard QWERTY 3×10 layout with `caps` repurposed
 as escape/shift.
 
+## Keymap diagram
+
+![Rendered keymap diagram](keymap.svg)
+
+[`keymap.svg`](keymap.svg) is rendered with
+[keymap-drawer](https://keymap-drawer.streamlit.app/). All three files below belong to that
+workflow — regenerate and commit the pair whenever chords or layers change:
+
+| File | Role |
+|---|---|
+| `gen_keymap.py` | Encodes the layers/chords (mirrored by hand from the `.kbd` modules) and auto-solves non-overlapping combo placement |
+| `keymap.json` | [keymap-drawer](https://keymap-drawer.streamlit.app/) input: layers + combos |
+| `keymap.svg` | [keymap-drawer](https://keymap-drawer.streamlit.app/) output: the diagram above |
+
+Regeneration:
+
+1. **`gen_keymap.py` → `keymap.json`** — the script writes to `/tmp/keymap.json`; copy it
+   over the repo copy when it looks right:
+
+   ```sh
+   python3 gen_keymap.py            # writes /tmp/keymap.json
+   cp /tmp/keymap.json keymap.json
+   ```
+
+2. **`keymap.json` → `keymap.svg`** — paste the contents of `keymap.json` into the
+   keymap-JSON tab of [keymap-drawer](https://keymap-drawer.streamlit.app/), then download
+   the rendered SVG as `keymap.svg`.
+
 ## Layer system
 
 | Layer | Purpose | How it's reached |
